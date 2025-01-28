@@ -30,4 +30,4 @@ console.log(result);
 let greet = (name) => {
     console.log(`Hey ${name}!`) ;
 }
-greet("nigga");
+greet("harold");
