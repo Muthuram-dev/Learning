@@ -31,3 +31,12 @@ let greet = (name) => {
     console.log(`Hey ${name}!`) ;
 }
 greet("harold");
+
+const randomVar = function rollDie(){
+    let random = Math.floor((Math.random() * 6)) +1;
+    return random;
+}
+
+// const rollDie = () => (
+//     Math.floor(Math.random() * 6) +1
+// )
