@@ -1,17 +1,17 @@
-//BASIC AGE CONDITIONS
+// BASIC AGE CONDITIONS
 
-// let age = prompt("Enter your age: ");
-// if (age < 18 && age >= 0) {
-//     console.log("You are not allowed inside");
+let age = prompt("Enter your age: ");
+if (age < 18 && age >= 0) {
+    console.log("You are not allowed inside");
 
-// } else if (age >= 18 && age <= 100) {
-//     console.log("You are allowed inside")
-// } else {
-//     console.log("Please enter a valid age");
-// }
+} else if (age >= 18 && age <= 100) {
+    console.log("You are allowed inside")
+} else {
+    console.log("Please enter a valid age");
+}
 
 
-//THEME PARK PRICING SYSTEM ACCORDING TO DIFFERENT AGE
+// THEME PARK PRICING SYSTEM ACCORDING TO DIFFERENT AGE
 // const age = prompt("Enter your age: ");
 // if(age>0 && age<5){
 //     console.log("You are a baby, you get in for free!");
@@ -39,7 +39,7 @@
 
 
 // TRUTHY AND FALSY VALUES
-//All the data-types and statements inside the conditional statement refers inherently to falsy values, meaning it won't execute
+// All the data-types and statements inside the conditional statement refers inherently to falsy values, meaning it won't execute
 // if(null || undefined || 0 || NaN || false || ""){
 //     console.log("Print this"); // this won't be printed
 // } else {
