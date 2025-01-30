@@ -30,17 +30,3 @@ console.log(result);
 let greet = (name) => {
     console.log(`Hey ${name}!`) ;
 }
-<<<<<<< HEAD
-greet("harold");
-=======
-greet("harold");
-
-const randomVar = function rollDie(){
-    let random = Math.floor((Math.random() * 6)) +1;
-    return random;
-}
-
-// const rollDie = () => (
-//     Math.floor(Math.random() * 6) +1
-// )
->>>>>>> branch1
