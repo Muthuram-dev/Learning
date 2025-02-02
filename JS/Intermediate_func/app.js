@@ -11,7 +11,7 @@ numbers.forEach(function el(num){
     console.log(num);
 })
 //SECOND EXAMPLE
-numbers.forEach(function evenNum(x){
+numbers.forEach((x)=>{
     if(x%2==0){
         console.log(`${x} is even`);
     } else{
@@ -61,3 +61,12 @@ const isEveryTrue = randomNum.every(nums=>nums<50);
 const isSomeTrue = randomNum.some(function(num){
     return num>100;
 });
+
+//REDUCE FUNCTION : It will have two parameters, accumulator and currentValue, Refer the notes for better understanding
+const prices = [10,199,299,,5,45,43,57,8];
+let lowestPrice = prices.reduce((x,y)=>{
+    if (x<y){
+        return x;
+    }
+    return y;
+})
