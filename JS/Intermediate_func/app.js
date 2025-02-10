@@ -70,3 +70,15 @@ let lowestPrice = prices.reduce((x,y)=>{
     }
     return y;
 })
+
+//default parameter : Basically just assigning a default value in the parameter if the user is not entering any valid value in the argument.
+
+const rollDie = (numSide = 6) => {
+    return Math.floor(Math.random() * numSide) +1;
+}
+
+//Spreads : This is used in iterable objects to expand the individual elements inside the object.
+
+const nums = [1,2,3,4,5,7,8,9,11,2,45];
+console.log(Math.max(nums)); //Will show NaN because we are passing the entire array into the funcion call.
+console.log(Math.max(...nums)); // adding three dots is the syntax to use spread
