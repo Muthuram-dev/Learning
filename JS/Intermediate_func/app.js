@@ -82,3 +82,5 @@ const rollDie = (numSide = 6) => {
 const nums = [1,2,3,4,5,7,8,9,11,2,45];
 console.log(Math.max(nums)); //Will show NaN because we are passing the entire array into the funcion call.
 console.log(Math.max(...nums)); // adding three dots is the syntax to use spread
+
+const newSpreadArray = [...nums, 12,13,14,15]; // THis will create a new array with the same elements from the previous array
