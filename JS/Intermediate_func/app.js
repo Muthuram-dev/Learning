@@ -43,11 +43,11 @@ const add = (a,b) => a+b
 const isEven = (num) => num%2===0
 
  //setTimeOut : It is a callback function that will execute the function that you give after the specified time
-// setTimeout(()=>console.log("Hello"), 2000);
+setTimeout(()=>console.log("Hello"), 2000);
 
 //setInterval : It will call the function repeatedly over the time interval you specified
-//const id = setInterval(()=>console.log(Math.random()),2000);
-// clearInterval(id);
+const id = setInterval(()=>console.log(Math.random()),2000);
+clearInterval(id);
 
 
 //FILTER METHOD : Basically this will create a subset of array from the main array without altering the main one.
@@ -84,3 +84,39 @@ console.log(Math.max(nums)); //Will show NaN because we are passing the entire a
 console.log(Math.max(...nums)); // adding three dots is the syntax to use spread
 
 const newSpreadArray = [...nums, 12,13,14,15]; // THis will create a new array with the same elements from the previous array
+
+//Rest params : This is used to pack the elements into an array which the user can pass as many elements as they want.
+
+const sum = (...nums) => {
+    return nums.reduce((x,y)=>x+y);
+}
+const raceResults = (gold, silver, ...rest) => {
+    console.log(`Gold medal goes to ${gold}`);
+    console.log(`Silver medal goes to ${silver}`);
+    console.log(`And rest of the medals goes to ${rest}`);
+}
+
+// Destructuring : This is used to unpack the values from the array or object into a separate variables.
+
+const grades = [450,415,368,360,330,300];
+const [first, second, third, ...rest] = grades;
+// console.log(first, rest);
+
+
+//We can also destructure the object
+const user = {
+    firstName: "John",
+    lastName: "Doe",
+    email: "john@gmail.com",
+    password: "123456",
+    bornyear: 1990,
+    city: "New York"
+}
+const {email, username:personName, bornyear = 1990} = user;
+//we can also add default values to the variables in case the value is not present in the object
+
+//Destructuring in function parameters when the object is passed as an argument
+const userDetails = ({firstName, lastName, email}) => (`Name: ${firstName} ${lastName} Email: ${email}`);
+console.log(userDetails(user));
+
+
