@@ -1,3 +1,4 @@
+//SELECTING IN DOM
 //Select by ID
 
 const banner = document.getElementById("banner"); //Get's the element that is under the ID banner and store that to a variable
@@ -14,6 +15,27 @@ console.dir(images);
 // }
 
 //Selecy by class name
+const tocnum = document.getElementsByClassName("square");
 
-const tocnum = document.getElementsByClassName("tocnumber");
-console.dir(tocnum);
+//QUERY SELECTOR
+
+//We can also select elements in our web-page through query selector in which we need to specify the elements in the parameter through writing CSS wordings inside the parameter.
+const heading = document.querySelector("h1"); // tag selector
+console.dir(heading);
+const tocElement = document.querySelector("#toc"); // ID selector
+console.dir(tocElement);
+const allImages = document.querySelector(".square");
+
+//QUERY SELECTOR ALL
+const links = document.querySelectorAll("p a");
+for (let link of links){
+    console.log(link.href);
+    
+}
+
+
+
+
+
+//MANIPULATING IN DOM
+
