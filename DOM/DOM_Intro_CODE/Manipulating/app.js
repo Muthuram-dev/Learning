@@ -38,4 +38,21 @@ for (let link of links){
 
 
 //MANIPULATING IN DOM
+//innerText : It basically shows the inner text inside of an HTML element (between the opening and closing tag)
+const innerText = document.querySelector("p").inerText = "Hello pa kanna";
+console.dir(innerText); 
+
+//textContent : It's very similar to that of innerText, but textContent will show everything while innerText might not show everything that is modified using the CSS. Basically, it will show the content as it is like in the web-page.
+const textContent = document.querySelector("#toc").textContent;
+console.dir(textContent);
+
+const boldText = document.querySelectorAll("b");
+for (let boldWords of boldText){
+    boldWords.innerText="I AM A BOLD TEXT!!"
+}
+
+//innerHTML : This is used to show all the HTML tags inside of an element which we use. We can also change the content inside the tag using HTML tags as HTML tags rather than it being just a string in innterText and textContent.
+
+const innerHTML = document.querySelector("h1").innerHTML = "<i>Hello pa kanna</i>" //This actually changes the HTML element to italic font
+
 
