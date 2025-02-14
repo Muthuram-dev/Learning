@@ -53,6 +53,17 @@ for (let boldWords of boldText){
 
 //innerHTML : This is used to show all the HTML tags inside of an element which we use. We can also change the content inside the tag using HTML tags as HTML tags rather than it being just a string in innterText and textContent.
 
-const innerHTML = document.querySelector("h1").innerHTML = "<i>Hello pa kanna</i>" //This actually changes the HTML element to italic font
+const innerHTML = document.querySelector("h1").innerHTML = "<i>Hello pa kanna</i>"; //This actually changes the HTML element to italic font
+
+//Attributes
+
+const changingID = document.querySelector("#banner").id = "mainPhoto"; //This will change the ID attribute of the element for which the ID belongs to
+const changingIDAgain = document.querySelector("#mainPhoto").id = "banner"; //Changing the ID again, back to the default value we set
+
+//getAttribute
+const getAttribute = document.querySelector("#toc");
+getAttribute.getAttribute("role"); //Will show if there is a value in the attribute you specified, else it will show null
+getAttribute.setAttribute("href" , "https://google.com"); //It will add the new attribute to the HTML element
 
 
+const inputLable = document.querySelector("input[type='text']");
