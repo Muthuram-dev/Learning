@@ -67,3 +67,10 @@ getAttribute.setAttribute("href" , "https://google.com"); //It will add the new 
 
 
 const inputLable = document.querySelector("input[type='text']");
+
+//Changing styles of an element
+
+const changingStyles = document.querySelector("h1");
+changingStyles.style.color = "green";
+changingStyles.style.fontSize = "500%";
+  
