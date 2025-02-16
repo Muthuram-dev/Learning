@@ -73,4 +73,4 @@ const inputLable = document.querySelector("input[type='text']");
 const changingStyles = document.querySelector("h1");
 changingStyles.style.color = "green";
 changingStyles.style.fontSize = "500%";
-  
+
