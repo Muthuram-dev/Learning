@@ -74,3 +74,5 @@ const changingStyles = document.querySelector("h1");
 changingStyles.style.color = "green";
 changingStyles.style.fontSize = "500%";
 
+const heading2 = document.querySelector("h2");
+//To view the styles using JS, we can use window.getComputedStyles(tagName).cssProperties
