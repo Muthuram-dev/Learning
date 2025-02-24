@@ -68,9 +68,18 @@ getAttribute.setAttribute("href" , "https://google.com"); //It will add the new 
 
 const inputLable = document.querySelector("input[type='text']");
 
-//Changing styles of an element
+//Changing styles of an element NOTE: This will change the style of the element in the inline style sheet, not in the external style sheet, which we don't want.
 
 const changingStyles = document.querySelector("h1");
 changingStyles.style.color = "green";
 changingStyles.style.fontSize = "500%";
 
+const allLinks = document.querySelectorAll("a");
+for (let link of allLinks){
+    link.style.color = "red";
+}
+
+//To get the style of an element, we can use window.getComputedStyle(tagName).cssProperties
+const h1 = document.querySelector("h1");
+console.log(window.getComputedStyle(h1).fontSize);
+console.log(window.getComputedStyle(h1).fontFamily);
