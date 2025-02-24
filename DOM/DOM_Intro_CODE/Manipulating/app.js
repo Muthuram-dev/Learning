@@ -83,3 +83,5 @@ for (let link of allLinks){
 const h1 = document.querySelector("h1");
 console.log(window.getComputedStyle(h1).fontSize);
 console.log(window.getComputedStyle(h1).fontFamily);
+
+//something new
