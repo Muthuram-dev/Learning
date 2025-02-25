@@ -84,6 +84,7 @@ const h1 = document.querySelector("h1");
 console.log(window.getComputedStyle(h1).fontSize);
 console.log(window.getComputedStyle(h1).fontFamily);
 
+
 //CLASS LIST
 const h2 = document.querySelector('h2');
 console.log(h2.classList.add('purple')); //THis will add the class purple to the element
@@ -108,3 +109,6 @@ newImg.src = "https://picsum.photos/id/237/200/300";
 // newImg.setAttribute('class', 'square');
 newImg.className = "square";
 document.body.appendChild(newImg); //THis will add the new element we created in the very end of the page
+
+//something new
+
