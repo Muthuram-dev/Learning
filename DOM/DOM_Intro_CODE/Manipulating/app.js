@@ -83,3 +83,28 @@ for (let link of allLinks){
 const h1 = document.querySelector("h1");
 console.log(window.getComputedStyle(h1).fontSize);
 console.log(window.getComputedStyle(h1).fontFamily);
+
+//CLASS LIST
+const h2 = document.querySelector('h2');
+console.log(h2.classList.add('purple')); //THis will add the class purple to the element
+console.log(h2.classList.add('border')); //Will add the class border into the element h2
+console.log(h2.classList.remove('border')); //Will remove the class border from the element h2
+
+//OTHER PROPERTIES AND METHODS
+
+//Parent element
+const firstBold = document.querySelector('b');
+console.log(firstBold.parentElement);
+console.log(firstBold.parentElement.parentElement);
+console.log(firstBold.parentElement.parentElement.parentElement); //YOu can just keep on doing this get the parent elements from an element
+
+const para = firstBold.parentElement;
+console.log(para.children);
+
+//CREATING A NEW ELEMENT USING JS IN THE WEB PAGE
+
+const newImg = document.createElement('img');
+newImg.src = "https://picsum.photos/id/237/200/300";
+// newImg.setAttribute('class', 'square');
+newImg.className = "square";
+document.body.appendChild(newImg); //THis will add the new element we created in the very end of the page
