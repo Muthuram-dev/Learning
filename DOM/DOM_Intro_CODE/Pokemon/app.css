@@ -2,6 +2,10 @@
     display: inline-block;
     text-align: center;
 }
+
+span{
+    text-align: center;
+}
 .pokemon img {
     display: block;
 }

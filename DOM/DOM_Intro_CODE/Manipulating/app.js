@@ -96,8 +96,9 @@ console.log(h2.classList.remove('border')); //Will remove the class border from 
 //Parent element
 const firstBold = document.querySelector('b');
 console.log(firstBold.parentElement);
-console.log(firstBold.parentElement.parentElement);
-console.log(firstBold.parentElement.parentElement.parentElement); //YOu can just keep on doing this get the parent elements from an element
+// console.log(firstBold.parentElement.parentElement);
+// console.log(firstBold.parentElement.parentElement.parentElement); //YOu can just keep on doing this get the parent elements from an element
+console.log(firstBold.nextElementSibling.nextElementSibling);
 
 const para = firstBold.parentElement;
 console.log(para.children);
@@ -110,5 +111,26 @@ newImg.src = "https://picsum.photos/id/237/200/300";
 newImg.className = "square";
 document.body.appendChild(newImg); //THis will add the new element we created in the very end of the page
 
-//something new
+const paragraph = document.querySelector('p')
+const newB = document.createElement('b');
+newB.innerText = "I AM THE NEW BOLD TEXT";
+paragraph.prepend(newB);
+
+//INSERING THE CREATED ELEMENT INSIDE THE WEB PAGE WHEREVER WE NEED
+const newH2 = document.createElement('h2');
+newH2.innerText = "I am the second heading!";
+
+// heading.append(newH1);
+heading.insertAdjacentElement('afterend', newH2);
+
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector("#container");
+    const buttons = document.createElement("button");
+    buttons.innerText = "Click me!";
+    container.append(buttons);
+});
+
+//REMOVING AN ELEMENT USING THE REMOVE AND REMOVECHILD PROPERTIES
+newB.parentElement.removeChild(newB);
+banner.remove(); //Will simply just remove the element! Short and sweet!
 

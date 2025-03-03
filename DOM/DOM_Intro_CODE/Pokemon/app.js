@@ -4,16 +4,19 @@ const container = document.querySelector('#container');
 const baseURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'
 
 
-for (let i = 1; i <= 151; i++) {
-    const pokemon = document.createElement('div');
-    pokemon.classList.add('pokemon');
-    const label = document.createElement('span');
-    label.innerText = `#${i}`;
-    const newImg = document.createElement('img');
-    newImg.src = `${baseURL}${i}.png`
+for(let i =0; i<200; i++){
+    const div = document.createElement("div");
+    // div.style.textAlign = "centre";
+    div.style.display = "inline-block";
 
 
-    pokemon.appendChild(newImg);
-    pokemon.appendChild(label);
-    container.appendChild(pokemon)
-}
+    const lable = document.createElement("span");
+    lable.innerText = `${i}`;
+    const img = document.createElement('img');
+    img.src = `${baseURL}${i}.png`;
+
+    div.appendChild(img);
+    img.appendChild(lable);
+    container.appendChild(div);
+
+};
