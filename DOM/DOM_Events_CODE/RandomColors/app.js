@@ -1,16 +1,27 @@
-const button = document.querySelector('button');
-const h1 = document.querySelector('h1');
+const randomButton = document.querySelector("#rndButton");
+const heading = document.querySelector("h1");
 
-button.addEventListener('click', function () {
-    const newColor = makeRandColor();
-    document.body.style.backgroundColor = newColor;
-    h1.innerText = newColor;
-})
+const randomColor = () => {
+    const random1 = Math.floor(Math.random() * 255) + 1;
+    const random2 = Math.floor(Math.random() * 255) + 1;
+    const random3 = Math.floor(Math.random() * 255) + 1;
+    
 
-const makeRandColor = () => {
-    const r = Math.floor(Math.random() * 255);
-    const g = Math.floor(Math.random() * 255);
-    const b = Math.floor(Math.random() * 255);
-    return `rgb(${r}, ${g}, ${b})`;
+    return { newColor: `rgb(${random1},${random2},${random3})`, sum: random1+random2+random3};
+
 }
+
+
+randomButton.addEventListener("click", ()=> {
+    const {newColor, sum} = randomColor();
+
+    document.body.style.backgroundColor = newColor;
+    heading.innerText = newColor;
+    
+    if(sum < 120){
+        heading.style.color = "white";
+    }
+});
+
+
 
