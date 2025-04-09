@@ -7,44 +7,47 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 </head>
 <body>
+  <section class="section">
     <div class="container">
-        <div class="column is-half is-offset-one-quarter">
-            <div class="card">
-                <header class="card-header">
-                  <p class="card-header-title">Ping Pong score keeper</p>
-                </header>
-                <div class="card-content">
-                  <div class="content">
-                    <h1 class="title is-1"> <span id="p1Display">0</span> to <span id="p2Display">0</span> </h1>
-                    <p class="subtitle">Use the button to set the final score</p>
-                  </div>
+      <div class="column is-half is-offset-one-quarter">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                  <img src="https://images.unsplash.com/photo-1609710228159-0fa9bd7c0827?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGluZyUyMHBvbmd8ZW58MHx8MHx8fDA%3D" alt="PingPong">
+              </figure>
+            </div>
+              <header class="card-header">
+                <p class="card-header-title">Ping Pong score keeper</p>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <h1 class="title is-1"> <span id="p1Display">0</span> to <span id="p2Display">0</span> </h1>
+                  <p class="subtitle">Use the dropdown below to set the final score:</p>
                 </div>
-                <div class="dropdown is-active">
-                <footer class="card-footer">
-                  <a href="#" class="card-footer-item"><button id="player1Button">Player1+</button></a>
-                  <a href="#" class="card-footer-item"><button id="player2Button">Player2+</button></a>
-                  <a href="#" class="card-footer-item"><button id="resetButton">Reset</button></a>
-                </footer>
+                <div class="select is-rounded">
+                  <select id="winningScoreSelector" name="playto">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                  </select>
+                </div>
               </div>
-        </div>
-    </div>
+              <footer class="card-footer">
+                <button class="button is-ghost card-footer-item" id="player1Button">Player1+</button>
+                <button class="button is-ghost card-footer-item" id="player2Button">Player2+</button>
+                <button class="button is-danger card-footer-item" id="resetButton">Reset</button>
+              </footer>
+            </div>
+      </div>
+  </div>
 
-
-    <main>
-    </main>
-
-    <label for="winnerScore">Choose the winning score</label>
-    <select name="winningScore" id="winningScoreSelector">
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-    </select>
-
-
+  </section>
+    
 
 
     <script src="app.js"></script>
