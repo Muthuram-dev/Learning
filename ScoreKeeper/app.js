@@ -10,11 +10,20 @@ const p2 = {
     display : document.querySelector("#p2Display")
 };
 
+const p1Name = prompt("Enter the player 1 name: ");
+const p2Name = prompt("Enter the player 2 name: ");
+p1.button.innerHTML = `${p1Name} +`;
+p2.button.innerHTML = `${p2Name} +`;
+p1.name = p1Name;
+p2.name = p2Name;
+
 const resetButton = document.querySelector('#resetButton');
 const winningScoreSelector = document.querySelector("#winningScoreSelector");
 
 let winningScore;
 let isGameOver = false;
+
+
 
 function updateScores(player, opponent){
     if(!isGameOver){
@@ -25,6 +34,7 @@ function updateScores(player, opponent){
             opponent.display.classList.add("has-text-danger");
             player.button.disabled = true;
             opponent.button.disabled = true;
+            alert(`${player.name} has won the game with ${player.score - opponent.score} difference`);
 
         }
         player.display.innerText = player.score;  
