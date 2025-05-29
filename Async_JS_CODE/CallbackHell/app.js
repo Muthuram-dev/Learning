@@ -8,7 +8,7 @@
 //     },1000);
 // },1000);
 
-const delayedColorChange = (delay, color, doNext) => {
+function delayedColorChange(delay, color, doNext){
     setTimeout(() => {
         document.body.style.backgroundColor = color;
         doNext();
