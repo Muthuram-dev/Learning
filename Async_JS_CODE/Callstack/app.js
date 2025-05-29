@@ -9,3 +9,4 @@ const isRightAngleTriangle = (a,b,c) => {
 console.log("BEFORE BREAKPOINT!")
 isRightAngleTriangle(3,4,5);
 console.log("AFTER BREAKPOINT!")
+
