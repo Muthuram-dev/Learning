@@ -1,0 +1,25 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+#newJokeButton{
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+
+#newJokeButton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#jokeBlock{
+    display: flex;
+    justify-content: center;
+}
