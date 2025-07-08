@@ -20,35 +20,35 @@ const getCharNameStarWars = async(q) => {
 getCharNameStarWars(2);
 getCharNameStarWars(5);
 
-// axios.get("https://swapi.tech/api/people/1")
-//   .then((res) => {
-//     console.log("THEN:", res.data.result.properties.name);
-//   });
+axios.get("https://swapi.tech/api/people/1")
+  .then((res) => {
+    console.log("THEN:", res.data.result.properties.name);
+  });
 
-// const fetchCharacter = async () => {
-//   console.log("ASYNC FUNCTION STARTED");
-//   const res = await axios.get("https://swapi.tech/api/people/2");
-//   console.log("ASYNC:", res.data.result.properties.name);
-// };
+const fetchCharacter = async () => {
+  console.log("ASYNC FUNCTION STARTED");
+  const res = await axios.get("https://swapi.tech/api/people/2");
+  console.log("ASYNC:", res.data.result.properties.name);
+};
 
-// fetchCharacter();
+fetchCharacter();
 
 
-// console.log("1");
+console.log("1");
 
-// setTimeout(() => {
-//   console.log("2 - timeout");
-// }, 0);
+setTimeout(() => {
+  console.log("2 - timeout");
+}, 0);
 
-// Promise.resolve().then(() => {
-//   console.log("3 - from .then()");
-// });
+Promise.resolve().then(() => {
+  console.log("3 - from .then()");
+});
 
-// (async () => {
-//   console.log("4 - before await");
-//   await Promise.resolve();
-//   console.log("5 - after await");
-// })();
+(async () => {
+  console.log("4 - before await");
+  await Promise.resolve();
+  console.log("5 - after await");
+})();
 
-// console.log("6");
+console.log("6");
 
