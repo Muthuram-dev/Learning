@@ -12,6 +12,11 @@ class Pet {
 
 
 class Cat extends Pet {
+    constructor(name, age, livesLeft){
+        super(name, age);
+        this.livesLeft = livesLeft;
+
+    }
     meow(){
         return "Meow"
     }
@@ -26,7 +31,5 @@ class Dog extends Pet {
 
 
 
-
-
-const cat1 = new Cat("Sugar", 3);
-const dog1 = new Dog("Salt", 13);
+const kitkat = new Cat("Sugar", 3, 7);
+const diaryMilk = new Dog("Salt", 13);
