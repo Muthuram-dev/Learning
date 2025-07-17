@@ -1,37 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperatur Converter</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Temp Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="icons8-temperature-16.png" type="image/x-icon">
 </head>
 <body>
-    <div id="mainContent">
-        <h1>Temperature Convertor</h1>
-        <form action="">
-            <div>
-                <label for="celcius"> Celcius: 
-                    <input type="number" name="celcius" id="celcius">
-                </label>
-            </div>
-            <div>
-                <label for="Farenheit"> Farenheit: 
-                    <input type="number" name="Farenheit" id="Farenheit">
-                </label>
-            </div>
-            <div>
-                <label for="kelvin"> kelvin: 
-                    <input type="number" name="kelvin" id="kelvin">
-                </label>
-            </div>
-            <!-- <button>submit</button> -->
-        </form>
+    <div class="container">
+    <h1 class="heading">Temperature Converter</h1>
+        <div class="temp-container">
+            <input type="number" id="celsius" placeholder="Celsius">
+        </div>
+        <div class="temp-container">
+            <input type="number" id="fahrenheit" placeholder="Fahrenheit">
+        </div>
+        <div class="temp-container">
+             <input type="Number" id="kelvin" placeholder="Kelvin">
+         </div>
+            <button id="clear">Clear</button>
     </div>
 
 
-
-
-
+  <script src="app.js"></script>
 </body>
 </html>
