@@ -40,3 +40,11 @@ clearBtn.addEventListener("click", function(){
   celsius.value = "";
 })
 
+
+
+
+    // const val = parseFloat(celsius.value);
+    // const val = parseFloat(kelvin.value);
+    //     fahrenheit.value = ((val * 9/5) + 32).toFixed(2);
+    //     kelvin.value = (val + 273.15).toFixed(2);
+    //     celsius.value = (val - 273.15).toFixed(2);
