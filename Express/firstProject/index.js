@@ -8,9 +8,16 @@ const app = express();
 //     res.send("hello, we got the request")
 // })
 
+
+
 app.get("/r/:subreddit", (req, res) => {
     const {subreddit} = req.params;
     res.send(`<h1> Welcome to the ${subreddit} subreddit`)
+})
+
+app.get("/search", (req, res) => {
+    const { q, color } = req.query;
+    res.send(`<h2> You are looking for the query: ${q} and the color: ${color}`);
 })
 
 app.get("/", (req, res) => {
