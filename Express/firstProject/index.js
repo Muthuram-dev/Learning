@@ -1,52 +1,57 @@
 const express = require("express");
-
 const app = express();
 
-// app.use((req, res) => {
-//     // console.dir(req);
-//     // console.log("You got2 a new request!")
-//     res.send("hello, we got the request")
+
+
+
+
+// app.use((req, res)=>{
+//     console.log("There comes a request to this server!");
+//     res.send("The incoming request has been stored!");
+
 // })
 
 
+//ROUTING
 
-app.get("/r/:subreddit", (req, res) => {
-    const {subreddit} = req.params;
-    res.send(`<h1> Welcome to the ${subreddit} subreddit`)
+app.get("/", (req, res) =>{
+    res.send("Welcome to our home page");
 })
 
-app.get("/search", (req, res) => {
-    const { q, color } = req.query;
-    res.send(`<h2> You are looking for the query: ${q} and the color: ${color}`);
+app.get("/help", (req, res)=>{
+    res.send("How may we help you with our app?");
 })
 
-app.get("/", (req, res) => {
-    res.send("Welcome to the home page")
+
+app.get("/careers", (req, res)=>{
+    res.send("Welcome to our career page, do you want to be a part of our team?");
 })
 
-app.post("/cats", (req, res) => {
-    res.send("You get 5 kitties")
+
+//PATH PARAMETERS
+app.get("/r/:subreddit/:comments", (req, res) => {
+    const { subreddit, comments } = req.params;
+    res.send(`Welcome to the ${subreddit}, and you are viewing ${comments} in this.`);
 })
 
-app.get("/cats", (req, res) => {
-    res.send("MEOW")
+
+//QUERY STRINGS
+app.get("/search", (req, res) =>{
+    const {filter} = req.query;
+    if (!filter){
+        res.send("<h1>Nothing will be here if nothing is searched up.</h1>");
+    }
+    res.send(`Did you just seatch for ${filter}`);
 })
 
-app.post("/dogs", (req, res) => {
-    res.send("You get 5 puppies")
+
+
+app.get(/(.*)/, (req,res) =>{
+    res.send("Make sure you are in the right URL")
 })
 
-app.get("/dogs", (req, res) => {
-    res.send("WOOF")
+app.listen(8080, (req, res)=>{
+    console.log("Listening in port 8080");
+
 })
 
-app.get(/(.*)/, (req, res) => {
-    res.send("The page you are looking for doesn't exist")
-})
-app.post(/(.*)/, (req, res) => {
-    res.send("The page you are looking for doesn't exist")
-})
-
-app.listen(3000, () => {
-    console.log("Listening on port 3000");
-});
