@@ -1,12 +1,25 @@
 const express = require("express");
+const path = require("path");
 const app = express();
 
+
+
+
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "/views"));
 
 app.get("/", (req, res) => {
-    res.send("Welcome to the home page");
+    res.render("home");
 })
 
+app.get("/random", (req, res) => {
+    const randNum = Math.floor(Math.random() * 10) +1;
+    res.render("random", {random: randNum});
+})
+
+app.get(/(.*)/, (req, res) => {
+    res.render("errorPage");
+})
 
 app.listen("3000", () => {
     console.log("listening on 3000");
