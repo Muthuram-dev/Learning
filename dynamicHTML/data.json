@@ -1,0 +1,29 @@
+{
+    "exampleData" :{
+  "subreddit": "javascript",
+  "description": "A community for JavaScript enthusiasts",
+  "posts": [
+    {
+      "id": 1,
+      "title": "Understanding Closures",
+      "author": "coder123",
+      "upvotes": 150,
+      "comments": 12
+    },
+    {
+      "id": 2,
+      "title": "ES6 Features You Should Know",
+      "author": "dev_guru",
+      "upvotes": 240,
+      "comments": 30
+    },
+    {
+      "id": 3,
+      "title": "Async/Await vs Promises",
+      "author": "newbie_dev",
+      "upvotes": 95,
+      "comments": 8
+    }
+  ]
+}
+}
