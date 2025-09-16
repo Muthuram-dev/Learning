@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= subreddit %></title>
-</head>
+<%- include("partials/head.ejs") %>
+
 <body>
-    <h1> <%= `Welcome to the ${subreddit}` %></h1>
+<%- include("partials/navbar.ejs") %>
+
+</nav>
+    <h1> <%= `Welcome to the ${logoName}` %></h1>
+    <h1> <%= `${subredditData}` %></h1>
 </body>
 </html>
