@@ -1,16 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random</title>
-</head>
+<%- include("partials/head.ejs") %>
+
 <body>
+<%- include("partials/navbar.ejs") %>
+
+
+
+<div class="container">
     <h1><%= `Your random number is : ${random}` %> </h1>
-    <!-- <% if (random % 2 === 0) { %>
+     <h2><p><% if (random % 2 === 0) { %>
         <%= "It's an even number" %>
     <% }  else { %>
     <%= "It's an odd number" %>
-    <% } %> -->
+    <% } %>
+    </p></h2>
+
+        <button onclick="window.location.reload()">Refresh Page</button>
+</div>
 </body>
 </html>
