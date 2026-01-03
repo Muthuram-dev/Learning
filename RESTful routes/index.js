@@ -1,5 +1,14 @@
-const express = require('express');
+const express = require("express");
 const app = express();
+
+
+
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+
+app.get("/", (req, res) => {
+    res.send("WELCOME TO THE HOME PAGE")
+})
 
 app.get("/tacos", (req, res) =>{
     res.send("GET /tacos response");
